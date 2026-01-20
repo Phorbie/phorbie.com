@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Phorbie</title>
+    <meta name="description" content="Phorbie — thoughtfully designed diabetes accessories." />
+    <style>
+      :root { color-scheme: light dark; }
+      body { margin: 0; font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+      .wrap { max-width: 860px; margin: 0 auto; padding: 64px 20px; }
+      .card { border: 1px solid rgba(127,127,127,.25); border-radius: 18px; padding: 28px; }
+      h1 { margin: 0 0 8px; font-size: 40px; letter-spacing: -0.03em; }
+      p { margin: 0 0 18px; opacity: .85; }
+      .row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+      a.btn {
+        display: inline-block; padding: 10px 14px; border-radius: 12px;
+        border: 1px solid rgba(127,127,127,.35); text-decoration: none;
+      }
+      a.btn:hover { transform: translateY(-1px); }
+      .small { margin-top: 18px; font-size: 13px; opacity: .7; }
+      .hero {
+        margin-top: 22px; border-radius: 16px; height: 220px;
+        background: radial-gradient(1200px 400px at 20% 20%, rgba(0,0,0,.08), transparent 60%),
+                    radial-gradient(900px 360px at 80% 40%, rgba(0,0,0,.10), transparent 55%),
+                    linear-gradient(135deg, rgba(127,127,127,.18), rgba(127,127,127,.05));
+        border: 1px solid rgba(127,127,127,.25);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="card">
+        <h1>Phorbie</h1>
+        <p>Thoughtfully designed accessories for diabetes tech. Built for daily use, designed to disappear.</p>
+
+        <div class="row">
+          <a class="btn" href="https://www.etsy.com/" target="_blank" rel="noreferrer">Shop on Etsy</a>
+          <a class="btn" href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+          <a class="btn" href="mailto:hello@phorbie.com">Contact</a>
+        </div>
+
+        <div class="hero" aria-hidden="true"></div>
+
+        <div class="small">
+          © <span id="y"></span> Phorbie. Made in San Diego.
+        </div>
+      </section>
+    </main>
+
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
