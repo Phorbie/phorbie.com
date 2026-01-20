@@ -1,0 +1,7 @@
+{
+  "name": "phorbie-landing",
+  "private": true,
+  "scripts": {
+    "build": "echo build ok"
+  }
+}
