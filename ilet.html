@@ -35,7 +35,7 @@
               camera-controls touch-action="pan-y" disable-zoom interaction-prompt="none"
               camera-orbit="-38deg 76deg 330mm" camera-target="0m 0.006m 0.008m" field-of-view="24deg"
               min-camera-orbit="auto 20deg auto" max-camera-orbit="auto 160deg auto"
-              shadow-intensity="1.1" shadow-softness="0.8" exposure="1.05" environment-image="neutral">
+              shadow-intensity="1.1" shadow-softness="0.8" exposure="1.05" environment-image="models/studio.hdr" tone-mapping="neutral">
               <div slot="progress-bar"></div>
             </model-viewer>
             <span class="ph">3D model · photos coming</span>
@@ -91,7 +91,7 @@
             <model-viewer id="scroll-viewer" src="models/ilet-case.glb" animation-name="open" loading="lazy"
               alt="The strap lifting open and closing again" interaction-prompt="none"
               camera-orbit="-70deg 80deg 700mm" camera-target="0m 0.05m 0.02m" field-of-view="26deg"
-              shadow-intensity="1.1" shadow-softness="0.8" exposure="1.05" environment-image="neutral">
+              shadow-intensity="1.1" shadow-softness="0.8" exposure="1.05" environment-image="models/studio.hdr" tone-mapping="neutral">
               <div slot="progress-bar"></div>
             </model-viewer>
           </div>
@@ -236,8 +236,8 @@
   <script>
     (function () {
       var names = { graphite: "Graphite", black: "Black", white: "White", red: "Red", orange: "Orange" };
-      var shellHex = { graphite: "#4B4B4B", black: "#232325", white: "#F2F2EF", red: "#C62B3C", orange: "#F26A21" };
-      var strapHex = { black: "#1E1E20", white: "#F0F0EC" };
+      var shellHex = { graphite: "#4B4B4B", black: "#2A2A2D", white: "#F2F2EF", red: "#C62B3C", orange: "#F26A21" };
+      var strapHex = { black: "#2B2B2E", white: "#F0F0EC" };
       var viewer = document.getElementById("viewer");
       var pick = { shell: "graphite", strap: "black" };
       var scrollViewer = document.getElementById("scroll-viewer");
