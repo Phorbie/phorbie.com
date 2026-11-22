@@ -90,7 +90,7 @@
           <div class="stage">
             <model-viewer id="scroll-viewer" src="models/ilet-case.glb" animation-name="open" loading="lazy"
               alt="The strap lifting open and closing again" interaction-prompt="none"
-              camera-orbit="-70deg 80deg 640mm" camera-target="0m 0.042m 0m" field-of-view="26deg"
+              camera-orbit="-70deg 80deg 700mm" camera-target="0m 0.05m 0.02m" field-of-view="26deg"
               shadow-intensity="1.1" shadow-softness="0.8" exposure="1.05" environment-image="neutral">
               <div slot="progress-bar"></div>
             </model-viewer>
@@ -271,8 +271,8 @@
           setT(viewer, from + (to - from) * k);
           if (k < 1) tween = requestAnimationFrame(step);
         })(start);
-        viewer.cameraOrbit = open ? "-20deg 80deg 520mm" : "-38deg 76deg 330mm";
-        viewer.cameraTarget = open ? "0m 0.035m 0m" : "0m 0.006m 0.008m";
+        viewer.cameraOrbit = open ? "-40deg 80deg 520mm" : "-38deg 76deg 330mm";
+        viewer.cameraTarget = open ? "0m 0.05m 0.025m" : "0m 0.006m 0.008m";
       }
 
       // Scroll story: the strap opens, holds, then closes as the section scrolls past.
@@ -293,7 +293,7 @@
         var p = Math.min(1, Math.max(0, -r.top / Math.max(1, r.height - vh)));
         var t = storyT(p); t = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
         setT(scrollViewer, Math.min(OPEN_T, t));
-        if (scrollViewer) scrollViewer.cameraOrbit = (-70 + 30 * p) + "deg 80deg 640mm";
+        if (scrollViewer) scrollViewer.cameraOrbit = (-70 + 30 * p) + "deg 80deg 700mm";
         var active = p < 0.36 ? 0 : p < 0.64 ? 1 : 2;
         steps.forEach(function (el, i) { el.classList.toggle("is-active", i === active); });
       }
