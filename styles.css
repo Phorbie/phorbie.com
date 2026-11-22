@@ -323,3 +323,21 @@ table.specs { width: 100%; border-collapse: collapse; font-size: 0.98rem; min-wi
 @media (max-width: 960px) { .pgrid { grid-template-columns: 1fr 1fr; } .pcard-lead { grid-column: 1 / -1; } }
 @media (max-width: 600px) { .pgrid { grid-template-columns: 1fr; } .hero-word { font-size: 9rem; } }
 @media (prefers-reduced-motion: reduce) { .hero-glow, .ticker-track { animation: none; } }
+
+/* Reviews */
+.reviews { background: radial-gradient(90% 70% at 20% 10%, #4A4A4B, #262627 70%); }
+.reviews h2 { color: var(--band-fg); }
+.stats { list-style: none; padding: 0; margin: 2.2rem 0 0; display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 1rem; border-block: 1px solid rgba(255,255,255,.12); }
+.stats li { display: grid; gap: .2rem; padding: 1.2rem 0; }
+.stats b { font: 850 clamp(1.8rem, 4vw, 2.8rem)/1 var(--font-display); font-stretch: 118%; color: var(--band-fg); letter-spacing: -0.02em; }
+.stats li:first-child b { color: var(--yellow); }
+.stats span { font: 500 .75rem var(--font-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--band-muted); }
+.quotes { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 1.2rem; margin: 2.2rem 0; }
+.quote { margin: 0; padding: 1.6rem; border-radius: 16px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); display: grid; gap: 1rem; align-content: space-between; box-shadow: 0 20px 40px -30px rgba(0,0,0,.6); }
+.quote blockquote { margin: 0; font: 600 1.15rem/1.45 var(--font-display); color: var(--band-fg); }
+.quote blockquote::before { content: "★★★★★"; display: block; color: var(--orange); letter-spacing: .15em; font-size: .9rem; margin-bottom: .7rem; }
+.quote:first-child blockquote { font-size: 1.35rem; }
+.quote figcaption { font: 500 .78rem var(--font-mono); color: var(--band-muted); letter-spacing: .06em; }
+.reviews .btn-ghost { color: var(--band-fg); }
+@media (max-width: 860px) { .quotes { grid-template-columns: 1fr; } .stats { grid-template-columns: 1fr 1fr; } }
+.pcard-media img.photo { object-fit: cover; mix-blend-mode: normal; }
