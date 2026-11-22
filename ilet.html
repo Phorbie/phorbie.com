@@ -33,7 +33,7 @@
             <model-viewer id="viewer" src="models/ilet-case.glb" animation-name="open" poster="img/case-graphite-black.webp"
               alt="3D model of the Phorbie case for the iLet with its magnetic strap"
               camera-controls touch-action="pan-y" disable-zoom interaction-prompt="none"
-              camera-orbit="-38deg 76deg 330mm" camera-target="0m 0.006m 0.008m" field-of-view="24deg"
+              camera-orbit="-38deg 76deg 370mm" camera-target="0m 0.008m 0.008m" field-of-view="24deg"
               min-camera-orbit="auto 20deg auto" max-camera-orbit="auto 160deg auto"
               shadow-intensity="1.1" shadow-softness="0.8" exposure="1.05" environment-image="models/studio.hdr" tone-mapping="neutral">
               <div slot="progress-bar"></div>
@@ -203,6 +203,34 @@
         <p class="notice" style="margin-top:2.5rem">iLet is a trademark of Beta Bionics, Inc., used here only to describe compatibility. Phorbie is not affiliated with or endorsed by Beta Bionics. This case is not a medical device.</p>
       </div>
     </section>
+    <section class="products" style="border-top:1px solid var(--line)">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">More from Phorbie</p>
+          <h2>Already on Etsy.</h2>
+        </div>
+        <div class="pgrid pgrid-2">
+          <a class="pcard reveal" href="https://www.etsy.com/" target="_blank" rel="noopener">
+            <div class="pcard-media"><span class="pnum">02</span><span class="tag">Best seller</span><span class="ph pphoto">Product photo</span></div>
+            <div class="pcard-body">
+              <h3>iLet Charger Adapter</h3>
+              <p>A 3D-printed holder for the iLet charging dock.</p>
+              <div class="pmeta"><span class="pprice">$16</span><span class="dots"><i style="--c:#2A2A2D"></i><i style="--c:#F2F2EF"></i><i style="--c:#C62B3C"></i></span></div>
+              <span class="pcta">Buy on Etsy <span aria-hidden="true">↗</span> <span class="ph">Listing link</span></span>
+            </div>
+          </a>
+          <a class="pcard reveal" href="https://www.etsy.com/" target="_blank" rel="noopener">
+            <div class="pcard-media"><span class="pnum">03</span><span class="ph pphoto">Product photo</span></div>
+            <div class="pcard-body">
+              <h3>Glucagon Kit Case</h3>
+              <p>A protective storage case for a glucagon vial and syringe.</p>
+              <div class="pmeta"><span class="pprice">$39</span></div>
+              <span class="pcta">Buy on Etsy <span aria-hidden="true">↗</span> <span class="ph">Listing link</span></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-foot">
@@ -215,6 +243,8 @@
         <h3>Products</h3>
         <ul>
           <li><a href="ilet.html">Case for the iLet</a></li>
+          <li><a href="index.html#products">iLet Charger Adapter</a></li>
+          <li><a href="index.html#products">Glucagon Kit Case</a></li>
           <li><a href="https://www.etsy.com/" target="_blank" rel="noopener">Etsy shop</a></li>
         </ul>
       </div>
@@ -271,8 +301,8 @@
           setT(viewer, from + (to - from) * k);
           if (k < 1) tween = requestAnimationFrame(step);
         })(start);
-        viewer.cameraOrbit = open ? "-40deg 80deg 520mm" : "-38deg 76deg 330mm";
-        viewer.cameraTarget = open ? "0m 0.05m 0.025m" : "0m 0.006m 0.008m";
+        viewer.cameraOrbit = open ? "-40deg 80deg 520mm" : "-38deg 76deg 370mm";
+        viewer.cameraTarget = open ? "0m 0.05m 0.025m" : "0m 0.008m 0.008m";
       }
 
       // Scroll story: the strap opens, holds, then closes as the section scrolls past.
@@ -306,5 +336,6 @@
       document.querySelectorAll(".y").forEach(function (el) { el.textContent = new Date().getFullYear(); });
     })();
   </script>
+  <script src="motion.js" defer></script>
 </body>
 </html>
