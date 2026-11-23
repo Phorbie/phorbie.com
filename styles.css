@@ -211,7 +211,7 @@ h1 { font-size: clamp(2.4rem, 5.6vw, 4rem); font-weight: 700; letter-spacing: -0
 h2 { font-size: clamp(1.7rem, 3.2vw, 2.4rem); font-weight: 700; letter-spacing: -0.015em; }
 h3 { font-size: 1.2rem; font-weight: 600; line-height: 1.3; }
 p { margin: 0; }
-.lede { font-size: 1.15rem; max-width: 36rem; }
+.lede { font-size: 1.15rem; max-width: 36rem; text-wrap: pretty; }
 .eyebrow {
   font: 500 0.75rem/1.3 var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--muted);
@@ -271,7 +271,6 @@ section { padding-block: clamp(3.5rem, 8vw, 6rem); }
 .pcard-media img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; transition: transform .4s ease; }
 .pcard-media img.photo { object-fit: cover; mix-blend-mode: normal; }
 .pcard:hover .pcard-media img { transform: scale(1.03); }
-.pnum { position: absolute; left: 14px; bottom: 12px; z-index: 1; font: 500 0.75rem/1 var(--font-mono); letter-spacing: 0.08em; color: #5E5E5C; }
 .tag { position: absolute; top: 14px; left: 14px; z-index: 1; font: 500 0.7rem/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; padding: .45rem .6rem; border-radius: 999px; background: var(--graphite); color: #FFFFFF; }
 .tag-new { background: var(--caution); color: var(--ink); }
 .pphoto { color: var(--red-text); }
@@ -297,10 +296,6 @@ section { padding-block: clamp(3.5rem, 8vw, 6rem); }
 .feature .textlink { color: var(--band-fg); }
 
 /* ---------- Reviews ---------- */
-.stats { list-style: none; padding: 0; margin: 2.2rem 0 0; display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 1rem; border-block: 1px solid var(--line); }
-.stats li { display: grid; gap: .3rem; padding: 1.2rem 0; }
-.stats b { font: 700 clamp(1.8rem, 4vw, 2.6rem)/1 var(--font-sans); letter-spacing: -0.02em; }
-.stats span { font: 500 .75rem var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 .quotes { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 1.2rem; margin: 2.2rem 0; }
 .quote { margin: 0; padding: 1.5rem; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); display: grid; gap: 1rem; align-content: space-between; }
 .quote blockquote { margin: 0; font: 500 1.1rem/1.5 var(--font-sans); }
@@ -443,10 +438,7 @@ table.specs { width: 100%; border-collapse: collapse; font-size: 0.98rem; min-wi
 .pcard-media.dark { background: radial-gradient(95% 85% at 50% 30%, #F4F4F1, #D6D6D1); }
 .pcard-media img { filter: drop-shadow(0 14px 14px rgba(0,0,0,.18)); }
 .pcard-media img.photo { filter: none; }
-.pnum { font-size: 0.72rem; color: #5E5E5C; }
-.pnum::after { content: " / 03"; opacity: .6; }
-.pgrid-2 .pnum::after { content: ""; }
-.feature-media { box-shadow: 0 30px 50px -30px rgba(0,0,0,.6); background: radial-gradient(95% 85% at 50% 30%, #FFFFFF, #E3E3DF); }
+.pgrid-2 .feature-media { box-shadow: 0 30px 50px -30px rgba(0,0,0,.6); background: radial-gradient(95% 85% at 50% 30%, #FFFFFF, #E3E3DF); }
 .stage { background: radial-gradient(95% 85% at 45% 30%, #FFFFFF, #DEDED9); box-shadow: 0 30px 50px -30px rgba(0,0,0,.6); }
 .quote { box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 14px 30px -24px rgba(0,0,0,.35); }
 
@@ -478,8 +470,7 @@ table.specs { width: 100%; border-collapse: collapse; font-size: 0.98rem; min-wi
   .step { min-height: 75vh; align-content: start; padding-top: 2rem; }
   .hero .wrap, .feature .wrap, .pdp .wrap { grid-template-columns: 1fr; gap: 2rem; }
   .values, .split, .quotes { grid-template-columns: 1fr; }
-  .stats { grid-template-columns: 1fr 1fr; }
-  .site-foot .wrap { grid-template-columns: 1fr 1fr; }
+    .site-foot .wrap { grid-template-columns: 1fr 1fr; }
   .site-foot .wrap > :first-child { grid-column: 1 / -1; }
 }
 @media (max-width: 600px) { .pgrid { grid-template-columns: 1fr; } }
@@ -509,9 +500,7 @@ main:has(> .nf) { display: flex; flex-direction: column; }
 }
 .nf .wrap { position: relative; z-index: 1; }
 /* Photo cards: the index label sits on a small chip so it reads over any background */
-.pcard-media:has(img.photo) .pnum { color: #F7F7F5; background: rgba(21,21,21,.62); padding: 4px 6px; border-radius: 4px; bottom: 10px; }
-.pcard-media:has(img.photo) .pnum::after { opacity: .75; }
-
+.pcard-media:has(img.photo) .pcard-media:has(img.photo) 
 /* Perimeters: soft contour lines around blocks or a product footprint, the secondary
    pattern to the dot grid. One or two places per page, never as a section divider. */
 .hero-media .contours {
