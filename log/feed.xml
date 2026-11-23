@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Phorbie build log</title>
+  <subtitle>What we're making, what changed, and what didn't work.</subtitle>
+  <link href="https://phorbie.com/log/"/>
+  <link rel="self" href="https://phorbie.com/log/feed.xml"/>
+  <id>https://phorbie.com/log/</id>
+  <updated>2026-11-23T00:00:00Z</updated>
+  <author><name>Phorbie</name></author>
+  <entry>
+    <title>The iLet case started as a rubber band</title>
+    <link href="https://phorbie.com/log/ilet-case-rubber-band/"/>
+    <id>https://phorbie.com/log/ilet-case-rubber-band/</id>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <summary>How a rubber band, a shelved plate and a charger adapter turned into a one-piece case, and what didn't work along the way.</summary>
+    <content type="html">&lt;p&gt;The iLet charges on a flat pad, and it's up to you to set it down in the right spot.&lt;/p&gt;
+&lt;p&gt;For a long time, our fix was a rubber band. It held the pump to a MagSafe battery pack, and the battery did the rest. It worked. It wasn't a product.&lt;/p&gt;
+&lt;h2&gt;Two ideas, one shelf&lt;/h2&gt;
+&lt;p&gt;That rubber band turned into two ideas.&lt;/p&gt;
+&lt;p&gt;The first was an adapter plate: something that clipped onto the iLet's own case, with a MagSafe ring built in, so any MagSafe charger would do. It turned out to be a much bigger design problem than we were ready for. It went on the shelf.&lt;/p&gt;
+&lt;p&gt;The second came at it from the other side. Leave the pump alone and fix the charger. That became the iLet Charger Adapter, our first product. It holds the iLet in the same spot on its charging pad, every time.&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&quot;https://phorbie.com/img/charger-adapter-photo.webp&quot; srcset=&quot;/img/charger-adapter-photo-600.webp 600w, /img/charger-adapter-photo-900.webp 900w, /img/charger-adapter-photo.webp 1200w&quot; sizes=&quot;(max-width: 760px) calc(100vw - 40px), 680px&quot; alt=&quot;Red iLet Charger Adapter holding an iLet on its charging pad, with the gray base underneath&quot; width=&quot;1200&quot; height=&quot;900&quot; loading=&quot;lazy&quot;&gt;&lt;figcaption&gt;The Charger Adapter, our first product.&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;It solved charging with the case and charger the iLet comes with. We wanted more than that: more chargers, more mounts and one less thing to line up.&lt;/p&gt;
+&lt;h2&gt;The case we didn't make (yet)&lt;/h2&gt;
+&lt;p&gt;The plan was a slim, modular case: a thin inner shell, with accessories that clip on and off depending on the day. It's still a good idea, and we may come back to it. For where our design skills were, it was too big a hill.&lt;/p&gt;
+&lt;h2&gt;One piece&lt;/h2&gt;
+&lt;p&gt;So we made it one piece. A single PETG shell, with steel plates built into the back. The plates hold to MagSafe-compatible chargers and mounts, and to the case's own strap, which closes with one magnet.&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&quot;https://phorbie.com/img/case-open-plates.webp&quot; srcset=&quot;/img/case-open-plates-600.webp 600w, /img/case-open-plates-900.webp 900w, /img/case-open-plates.webp 1200w&quot; sizes=&quot;(max-width: 760px) calc(100vw - 40px), 680px&quot; alt=&quot;Graphite case for the iLet with its strap lifted, showing the two steel plates on the back&quot; width=&quot;1200&quot; height=&quot;900&quot; loading=&quot;lazy&quot;&gt;&lt;figcaption&gt;Strap up, plates showing.&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;One piece meant fewer joints to get right. It didn't mean fewer prints.&lt;/p&gt;
+&lt;h2&gt;What didn't work, and what did&lt;/h2&gt;
+&lt;p&gt;To see where the glue was actually going, we printed a shell in clear PETG and bonded it with JB Weld ClearWeld. Every joint, visible.&lt;/p&gt;
+&lt;p&gt;The plates are 430 stainless with a #4 finish, laser cut by OSHCut. Stainless so they hold up, 430 because it's magnetic. They're bonded in with a toughened epoxy.&lt;/p&gt;
+&lt;p&gt;The first strap magnets went in with E6000. It's fine on most things. On foamed TPU, it peeled right off. The magnet is now bonded with an MS polymer adhesive, which holds.&lt;/p&gt;
+&lt;p&gt;The strap itself is Siraya Tech TPU Air: foamed, matte and light, so it doesn't feel like plastic against you all day.&lt;/p&gt;
+&lt;h2&gt;Where it is now&lt;/h2&gt;
+&lt;p&gt;Hundreds of iterations and more than six months of testing later, on the bench and on a belt, the case is nearly done. It soft-launches January 4, 2027.&lt;/p&gt;</content>
+  </entry>
+</feed>
