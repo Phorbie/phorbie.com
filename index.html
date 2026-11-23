@@ -7,9 +7,7 @@
   <meta name="claude:viewport-fit-sides" content="cover">
   <meta name="description" content="Phorbie makes small-batch accessories for the diabetes tech you wear every day. Designed and made in California.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="preload" href="/fonts/archivo-100-900-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -31,17 +29,17 @@
       <div class="hero-word" aria-hidden="true">PHORBIE</div>
       <div class="wrap">
         <div class="hero-copy">
-          <p class="eyebrow reveal">Accessories for diabetes tech</p>
-          <h1 class="reveal">Gear for the device you <em>wear</em> every&nbsp;day.</h1>
-          <p class="lede reveal">Phorbie designs and makes small-batch accessories for insulin pumps and the hardware around them. New this winter: a slim case and magnetic strap for the iLet.</p>
-          <div class="btn-row reveal">
+          <p class="eyebrow">Accessories for diabetes tech</p>
+          <h1>Gear for the device you <em>wear</em> every&nbsp;day.</h1>
+          <p class="lede">Phorbie designs and makes small-batch accessories for insulin pumps and the hardware around them. New this winter: a slim case and magnetic strap for the iLet.</p>
+          <div class="btn-row">
             <a class="btn btn-primary" href="ilet.html">See the iLet case <span aria-hidden="true">→</span></a>
             <a class="btn btn-ghost" href="#products">All products</a>
           </div>
-          <p class="launch-note reveal">Soft launch January 4, 2027</p>
+          <p class="launch-note">Soft launch January 4, 2027</p>
         </div>
         <div class="hero-media">
-          <img class="lineup" data-parallax="0.06" src="img/hero-lineup.webp" width="1400" height="1069" alt="Five Phorbie cases for the iLet in black, red, graphite, white and orange. The graphite case in the middle has its strap open, showing the two steel plates on the back.">
+          <img fetchpriority="high" class="lineup" data-parallax="0.06" src="img/hero-lineup.webp" srcset="img/hero-lineup-600.webp 600w, img/hero-lineup-900.webp 900w, img/hero-lineup.webp 1400w" sizes="(max-width: 860px) calc(100vw - 40px), 540px" width="1400" height="1069" alt="Five Phorbie cases for the iLet in black, red, graphite, white and orange. The graphite case in the middle has its strap open, showing the two steel plates on the back.">
           <div class="floor" aria-hidden="true"></div>
         </div>
       </div>
@@ -65,7 +63,7 @@
             <div class="pcard-media dark">
               <span class="pnum">01</span>
               <span class="tag tag-new">New · Jan 2027</span>
-              <img src="img/case-graphite-black.webp" width="1200" height="900" alt="Graphite case for the iLet with a black magnetic strap" loading="lazy">
+              <img src="img/case-graphite-black.webp" srcset="img/case-graphite-black-600.webp 600w, img/case-graphite-black-900.webp 900w, img/case-graphite-black.webp 1200w" sizes="(max-width: 960px) calc(100vw - 40px), 450px" width="1200" height="900" alt="Graphite case for the iLet with a black magnetic strap" loading="lazy">
             </div>
             <div class="pcard-body">
               <h3>Case for the iLet</h3>
@@ -78,7 +76,7 @@
             <div class="pcard-media">
               <span class="pnum">02</span>
               <span class="tag">Best seller</span>
-              <img class="photo" src="img/charger-adapter-photo.webp" width="1200" height="900" alt="Red iLet Charger Adapter holding an iLet on its charging pad, with the gray base underneath" loading="lazy">
+              <img class="photo" src="img/charger-adapter-photo.webp" srcset="img/charger-adapter-photo-600.webp 600w, img/charger-adapter-photo-900.webp 900w, img/charger-adapter-photo.webp 1200w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 960px) calc(50vw - 30px), 410px" width="1200" height="900" alt="Red iLet Charger Adapter holding an iLet on its charging pad, with the gray base underneath" loading="lazy">
             </div>
             <div class="pcard-body">
               <h3>iLet Charger Adapter</h3>
@@ -90,7 +88,7 @@
           <a class="pcard reveal" href="https://www.etsy.com/listing/4451626435/glucagon-kit-case-protective-storage" target="_blank" rel="noopener">
             <div class="pcard-media">
               <span class="pnum">03</span>
-              <img src="img/glucagon-closed-red.webp" width="1200" height="900" alt="Red Glucagon Kit Case, closed, with EMERGENCY GLUCAGON in white on the lid" loading="lazy">
+              <img src="img/glucagon-closed-red.webp" srcset="img/glucagon-closed-red-600.webp 600w, img/glucagon-closed-red-900.webp 900w, img/glucagon-closed-red.webp 1200w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 960px) calc(50vw - 30px), 410px" width="1200" height="900" alt="Red Glucagon Kit Case, closed, with EMERGENCY GLUCAGON in white on the lid" loading="lazy">
             </div>
             <div class="pcard-body">
               <h3>Glucagon Kit Case</h3>
@@ -106,7 +104,7 @@
     <section class="feature band grain">
       <div class="wrap">
         <div class="feature-media tilt reveal">
-          <img src="img/case-open-plates.webp" alt="Graphite case for the iLet with its strap lifted, showing the two steel plates on the back" width="1200" height="900" loading="lazy">
+          <img src="img/case-open-plates.webp" srcset="img/case-open-plates-600.webp 600w, img/case-open-plates-900.webp 900w, img/case-open-plates.webp 1200w" sizes="(max-width: 860px) calc(100vw - 40px), 550px" alt="Graphite case for the iLet with its strap lifted, showing the two steel plates on the back" width="1200" height="900" loading="lazy">
         </div>
         <div class="feature-copy reveal">
           <p class="eyebrow">Product 01 · Case for the iLet</p>

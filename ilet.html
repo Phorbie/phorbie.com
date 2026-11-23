@@ -7,11 +7,16 @@
   <meta name="claude:viewport-fit-sides" content="cover">
   <meta name="description" content="A slim PETG case for the iLet with a MagSafe-compatible steel mount and a magnetic TPU strap. Five shell colors, black or white strap. Made in California.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="preload" href="/fonts/archivo-100-900-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
-  <script type="module" src="vendor/model-viewer-3.5.0.min.js"></script>
+  <script>self.ModelViewerElement = { meshoptDecoderLocation: "vendor/meshopt_decoder-0.22.0.js" };</script>
+  <script>
+    // Load the 3D viewer after the page has painted, so text and the poster image show first.
+    addEventListener("load", function () {
+      var s = document.createElement("script"); s.type = "module"; s.src = "vendor/model-viewer-3.5.0.min.js";
+      document.head.appendChild(s);
+    });
+  </script>
 </head>
 <body>
   <header class="site-head">
@@ -30,12 +35,12 @@
       <div class="wrap">
         <div class="stage-col">
           <div class="stage">
-            <model-viewer id="viewer" src="models/ilet-case.glb" animation-name="open" poster="img/case-graphite-black.webp"
+            <model-viewer id="viewer" src="models/ilet-case.v2.glb" animation-name="open" poster="img/case-graphite-black.webp"
               alt="3D model of the Phorbie case for the iLet with its magnetic strap"
               camera-controls touch-action="pan-y" disable-zoom interaction-prompt="none"
               camera-orbit="-38deg 76deg 370mm" camera-target="0m 0.008m 0.008m" field-of-view="24deg"
               min-camera-orbit="auto 20deg auto" max-camera-orbit="auto 160deg auto"
-              shadow-intensity="1.1" shadow-softness="0.8" exposure="1.05" environment-image="models/studio.hdr" tone-mapping="neutral">
+              shadow-intensity="1.1" shadow-softness="0.8" exposure="1.05" environment-image="models/studio-256.hdr" tone-mapping="neutral">
               <div slot="progress-bar"></div>
             </model-viewer>
             <span class="ph">3D model · photos coming</span>
@@ -88,10 +93,10 @@
       <div class="wrap how-grid">
         <div class="how-stage">
           <div class="stage">
-            <model-viewer id="scroll-viewer" src="models/ilet-case.glb" animation-name="open" loading="lazy"
+            <model-viewer id="scroll-viewer" src="models/ilet-case.v2.glb" animation-name="open" loading="lazy"
               alt="The strap lifting open and closing again" interaction-prompt="none"
               camera-orbit="-70deg 80deg 700mm" camera-target="0m 0.05m 0.02m" field-of-view="26deg"
-              shadow-intensity="1.1" shadow-softness="0.8" exposure="1.05" environment-image="models/studio.hdr" tone-mapping="neutral">
+              shadow-intensity="1.1" shadow-softness="0.8" exposure="1.05" environment-image="models/studio-256.hdr" tone-mapping="neutral">
               <div slot="progress-bar"></div>
             </model-viewer>
           </div>
@@ -211,7 +216,7 @@
         </div>
         <div class="pgrid pgrid-2">
           <a class="pcard reveal" href="https://www.etsy.com/listing/4457449473/ilet-charger-adapter" target="_blank" rel="noopener">
-            <div class="pcard-media"><span class="pnum">02</span><span class="tag">Best seller</span><img class="photo" src="img/charger-adapter-photo.webp" width="1200" height="900" alt="Red iLet Charger Adapter holding an iLet on its charging pad, with the gray base underneath" loading="lazy"></div>
+            <div class="pcard-media"><span class="pnum">02</span><span class="tag">Best seller</span><img class="photo" src="img/charger-adapter-photo.webp" srcset="img/charger-adapter-photo-600.webp 600w, img/charger-adapter-photo-900.webp 900w, img/charger-adapter-photo.webp 1200w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 960px) calc(50vw - 30px), 410px" width="1200" height="900" alt="Red iLet Charger Adapter holding an iLet on its charging pad, with the gray base underneath" loading="lazy"></div>
             <div class="pcard-body">
               <h3>iLet Charger Adapter</h3>
               <p>Locks the iLet onto its charging pad in the same spot every time, so it stops sliding off the coil. Printed in PETG.</p>
@@ -220,7 +225,7 @@
             </div>
           </a>
           <a class="pcard reveal" href="https://www.etsy.com/listing/4451626435/glucagon-kit-case-protective-storage" target="_blank" rel="noopener">
-            <div class="pcard-media"><span class="pnum">03</span><img src="img/glucagon-closed-red.webp" width="1200" height="900" alt="Red Glucagon Kit Case, closed, with EMERGENCY GLUCAGON in white on the lid" loading="lazy"></div>
+            <div class="pcard-media"><span class="pnum">03</span><img src="img/glucagon-closed-red.webp" srcset="img/glucagon-closed-red-600.webp 600w, img/glucagon-closed-red-900.webp 900w, img/glucagon-closed-red.webp 1200w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 960px) calc(50vw - 30px), 410px" width="1200" height="900" alt="Red Glucagon Kit Case, closed, with EMERGENCY GLUCAGON in white on the lid" loading="lazy"></div>
             <div class="pcard-body">
               <h3>Glucagon Kit Case</h3>
               <p>A hinged case with a soft TPU liner for a vial-and-syringe glucagon kit, marked EMERGENCY GLUCAGON on the lid. Case only.</p>
