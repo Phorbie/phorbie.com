@@ -577,3 +577,6 @@ main:has(> .nf) { display: flex; flex-direction: column; }
    motion.js sets .in and --drift, and does nothing with reduced motion. */
 .motion .keys > .key { opacity: 0; transform: translateY(calc(-1 * (var(--t) + 16px))); transition: opacity .45s ease var(--kd, 0ms), transform .75s cubic-bezier(.2,.8,.2,1) var(--kd, 0ms); }
 .motion .keys.in > .key { opacity: 1; transform: none; }
+
+/* Anchor jumps land below the sticky header */
+html { scroll-padding-top: 5rem; }
