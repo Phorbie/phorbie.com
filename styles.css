@@ -529,3 +529,6 @@ main:has(> .nf) { display: flex; flex-direction: column; }
 .nf .wrap { position: relative; z-index: 1; }
 .nf-art { position: absolute; right: 0; top: 50%; transform: translateY(-50%); }
 @media (max-width: 860px) { .nf-art { display: none; } }
+/* Photo cards: the index label sits on a small chip so it reads over any background */
+.pcard-media:has(img.photo) .pnum { color: #F7F7F5; background: rgba(21,21,21,.62); padding: 4px 6px; border-radius: 4px; bottom: 10px; }
+.pcard-media:has(img.photo) .pnum::after { opacity: .75; }
