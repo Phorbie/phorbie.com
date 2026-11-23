@@ -203,7 +203,7 @@ a { color: inherit; }
 .logo svg { height: 26px; width: auto; }
 .nav { display: flex; gap: 1.6rem; align-items: center; font-size: 0.95rem; font-weight: 500; }
 .nav a { text-decoration: none; color: var(--band-muted); }
-.nav a:hover, .nav a[aria-current="page"] { color: var(--band-fg); }
+.nav a:hover, .nav a[aria-current] { color: var(--band-fg); }
 
 /* ---------- Type ---------- */
 h1, h2, h3 { font-family: var(--font-sans); line-height: 1.08; text-wrap: balance; margin: 0; }
