@@ -1,3 +1,79 @@
+/* Self-hosted from Google Fonts (SIL Open Font License 1.1). Latin and Latin Extended subsets only. */
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+  src: url(fonts/archivo-100-900-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+  src: url(fonts/archivo-100-900-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/ibm-plex-mono-400-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/ibm-plex-mono-400-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/ibm-plex-mono-500-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/ibm-plex-mono-500-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/ibm-plex-mono-600-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/ibm-plex-mono-600-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* Phorbie site styles
    Layout: graphite product band up top, quiet light sections below, specs set like a parts sheet.
    Palette: graphite leads (~60%), orange is the action color (dark text on it), red for small details,
@@ -143,6 +219,8 @@ section { padding-block: clamp(3.5rem, 8vw, 6rem); }
 }
 .stage-col { display: grid; gap: 0.75rem; min-width: 0; }
 .stage model-viewer { width: 100%; height: 100%; background: transparent; --poster-color: transparent; }
+/* Until the viewer script loads, show the same poster image the viewer uses. */
+.stage model-viewer#viewer:not(:defined) { display: block; background: url(img/case-graphite-black.webp) center / contain no-repeat; }
 .stage-bar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
 .seg { display: inline-flex; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; padding: 3px; }
 .seg button { font: 600 0.9rem var(--font-body); color: var(--band-muted); background: transparent; border: 0; border-radius: 999px; padding: 0.45rem 0.9rem; cursor: pointer; }
@@ -245,8 +323,8 @@ table.specs { width: 100%; border-collapse: collapse; font-size: 0.98rem; min-wi
 .hero-x { background: radial-gradient(120% 90% at 75% 40%, #5A5A5B 0%, #3A3A3B 45%, #232324 100%); overflow: hidden; padding-block: clamp(4rem, 9vw, 7.5rem) clamp(3rem, 7vw, 5rem); }
 .hero-x .wrap { position: relative; z-index: 1; }
 .hero-glow { position: absolute; z-index: -1; width: 70vw; height: 70vw; max-width: 900px; max-height: 900px; right: -12vw; top: 50%; transform: translateY(-50%);
-  background: radial-gradient(circle, rgba(242,106,33,.30) 0%, rgba(242,106,33,.10) 35%, transparent 65%); filter: blur(10px); animation: breathe 9s ease-in-out infinite; }
-@keyframes breathe { 0%,100% { opacity: .75; transform: translateY(-50%) scale(1); } 50% { opacity: 1; transform: translateY(-50%) scale(1.06); } }
+  background: radial-gradient(circle, rgba(242,106,33,.30) 0%, rgba(242,106,33,.10) 35%, transparent 65%); filter: blur(10px); opacity: .9; }
+/* The glow is static on purpose: animating this large blurred layer under the grain overlay forced a full repaint every frame (about 24 fps on retina desktops). */
 .hero-word { position: absolute; z-index: -1; left: -1vw; bottom: -0.18em; font: 900 clamp(7rem, 24vw, 22rem)/0.8 var(--font-display); font-stretch: 125%; letter-spacing: -0.04em;
   color: transparent; -webkit-text-stroke: 1.5px rgba(255,255,255,.07); white-space: nowrap; user-select: none; }
 .hero-x h1 { font-size: clamp(2.6rem, 6.6vw, 5.2rem); font-stretch: 118%; font-weight: 850; letter-spacing: -0.035em; }
@@ -322,7 +400,7 @@ table.specs { width: 100%; border-collapse: collapse; font-size: 0.98rem; min-wi
 .pgrid-2 { grid-template-columns: 1fr 1fr; max-width: 52rem; }
 @media (max-width: 960px) { .pgrid { grid-template-columns: 1fr 1fr; } .pcard-lead { grid-column: 1 / -1; } }
 @media (max-width: 600px) { .pgrid { grid-template-columns: 1fr; } .hero-word { font-size: 9rem; } }
-@media (prefers-reduced-motion: reduce) { .hero-glow, .ticker-track { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .ticker-track { animation: none; } }
 
 /* Reviews */
 .reviews { background: radial-gradient(90% 70% at 20% 10%, #4A4A4B, #262627 70%); }
