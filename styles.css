@@ -572,7 +572,13 @@ main:has(> .nf) { display: flex; flex-direction: column; }
 .section-head:has(.kline) > :not(.kline) { max-width: 40rem; }
 @media (max-width: 900px) { .kline > .keys { display: none; } }
 /* Hanging keys drop below the heading: keep a clear cell between them and what follows. */
-@media (min-width: 901px) { .section-head:has(.key.hang) { padding-bottom: var(--cell); } }
+@media (min-width: 901px) {
+  .section-head:has(.key.hang) { padding-bottom: var(--cell); }
+  /* Hanging keys drop past the heading, so they sit at the right edge, and the text below keeps three cells clear of them.
+     --gw is the group's width in cells, set on the section head. */
+  .section-head .kline > .keys:has(.hang) { margin-left: auto; }
+  .section-head:has(.key.hang) > :not(.kline) { max-width: min(40rem, calc(100% - (var(--gw, 8) + 3) * var(--cell))); }
+}
 .foot-keys { margin-top: var(--cell); padding-bottom: 16px; }   /* one cell clear of the footer line; room for the skirt */
 /* Movement: keys settle down by their own travel as they arrive; bigger keys drift a little further on scroll.
    motion.js sets .in and --drift, and does nothing with reduced motion. */
