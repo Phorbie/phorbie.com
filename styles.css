@@ -258,10 +258,6 @@ section { padding-block: clamp(3.5rem, 8vw, 6rem); }
 .launch-note { display: inline-flex; align-items: center; gap: 0.55rem; font: 500 0.82rem var(--font-mono); color: var(--band-muted); }
 .launch-note::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--caution); flex: none; }
 
-/* Spec line under the hero: plain facts, set like a parts label */
-.specline { border-bottom: 1px solid var(--line); }
-.specline ul { list-style: none; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 0.4rem 2.6rem; padding-block: 1rem; }
-.specline li { display: inline-flex; align-items: center; gap: 0.6rem; font: 500 0.75rem/1.4 var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 
 /* ---------- Product cards ---------- */
 .pgrid { display: grid; grid-template-columns: 1.35fr 1fr 1fr; gap: 1.2rem; margin-top: 2.4rem; }
@@ -453,8 +449,6 @@ table.specs { width: 100%; border-collapse: collapse; font-size: 0.98rem; min-wi
 .stage { background: radial-gradient(95% 85% at 45% 30%, #FFFFFF, #DEDED9); box-shadow: 0 30px 50px -30px rgba(0,0,0,.6); }
 .quote { box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 14px 30px -24px rgba(0,0,0,.35); }
 
-.specline { border-bottom: 1px solid var(--line); }
-.specline ul { padding-block: 1.3rem 1rem; }
 
 /* Build log */
 .log { list-style: none; margin: 2.4rem 0 0; padding: 0; border-top: 2px solid var(--graphite); }
