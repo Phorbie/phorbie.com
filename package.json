@@ -2,6 +2,6 @@
   "name": "phorbie-landing",
   "private": true,
   "scripts": {
-    "build": "echo build ok"
+    "build": "node tools/build-log.mjs"
   }
 }
